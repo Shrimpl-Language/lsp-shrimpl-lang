@@ -1,27 +1,8 @@
 # Shrimpl Language Server for VS Code
 
+[![Get it now on VS Code! :D](https://img.shields.io/badge/Get%20it%20now%20on-VS%20Code!%20:D-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=bdt-apex.shrimpl)
+
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=bdt-apex.shrimpl" target="_blank" style="text-decoration:none;">
-  <span style="
-    display:inline-flex;
-    align-items:center;
-    padding:4px 10px;
-    border-radius:999px;
-    background:#007ACC;
-    color:#fff;
-    font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    font-size:13px;
-    font-weight:600;
-    gap:6px;
-  ">
-    <img
-      src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000"
-      alt="VS Code icon"
-      style="width:16px;height:16px;filter:invert(1) brightness(2);"
-    />
-    <span>Get it now on VS Code! :D</span>
-  </span>
-</a>
   <a href="https://shrimpl.dev" target="_blank" style="padding-left: 12px; padding-right: 12px;">
     <img 
       src="https://img.shields.io/badge/Visit%20Website-005BBB?style=for-the-badge&logo=google-chrome&logoColor=white" 
