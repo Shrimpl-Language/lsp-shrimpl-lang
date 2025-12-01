@@ -1,7 +1,5 @@
 # Shrimpl Language Server for VS Code
 
-# Shrimpl Language Server for VS Code
-
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=bdt-apex.shrimpl" target="_blank" style="margin: 0 4px;">
     <img
