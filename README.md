@@ -1,18 +1,25 @@
 # Shrimpl Language Server for VS Code
 
-[![Get it now on VS Code! :D](https://img.shields.io/badge/Get%20it%20now%20on-VS%20Code!%20:D-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=bdt-apex.shrimpl)
+# Shrimpl Language Server for VS Code
 
 <p align="center">
-  <a href="https://shrimpl.dev" target="_blank" style="padding-left: 12px; padding-right: 12px;">
-    <img 
-      src="https://img.shields.io/badge/Visit%20Website-005BBB?style=for-the-badge&logo=google-chrome&logoColor=white" 
+  <a href="https://marketplace.visualstudio.com/items?itemName=bdt-apex.shrimpl" target="_blank" style="margin: 0 4px;">
+    <img
+      src="https://img.shields.io/badge/Get%20it%20now%20on-VS%20Code!%20:D-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white"
+      alt="Get it now on VS Code! :D"
+    />
+  </a>
+
+  <a href="https://shrimpl.dev" target="_blank" style="margin: 0 4px;">
+    <img
+      src="https://img.shields.io/badge/Visit%20Website-005BBB?style=for-the-badge&logo=google-chrome&logoColor=white"
       alt="Shrimpl Website"
     />
   </a>
 
-  <a href="https://discord.gg/svnFRwfz" target="_blank" style="padding-left: 12px;">
-    <img 
-      src="https://img.shields.io/badge/Join%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" 
+  <a href="https://discord.gg/svnFRwfz" target="_blank" style="margin: 0 4px;">
+    <img
+      src="https://img.shields.io/badge/Join%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"
       alt="Discord"
     />
   </a>
