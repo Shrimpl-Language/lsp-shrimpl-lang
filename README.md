@@ -5,10 +5,10 @@
     <img 
       src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" 
       alt="Get it now on VS Code :D"
-      style="width: 50px, height: 50px;"
+      style="width: 50px; height: 50px;"
     />
   </a>
-  <a href="https://shrimpl.dev" target="_blank" style="padding-left: 12px, padding-right: 12px;">
+  <a href="https://shrimpl.dev" target="_blank" style="padding-left: 12px; padding-right: 12px;">
     <img 
       src="https://img.shields.io/badge/Visit%20Website-005BBB?style=for-the-badge&logo=google-chrome&logoColor=white" 
       alt="Shrimpl Website"
