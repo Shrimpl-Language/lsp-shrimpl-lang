@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=bdt-apex.shrimpl" target="_blank" style="padding-right: 12px;">
     <img 
-      src="https://img.icons8.com/?size=100&id=h67b5xF2blsK&format=png&color=000000" 
+      src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" 
       alt="Get it now on VS Code :D"
     />
   </a>
