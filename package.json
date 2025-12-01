@@ -2,14 +2,29 @@
   "name": "shrimpl",
   "displayName": "Shrimpl",
   "description": "Language support for the Shrimpl language (LSP + syntax).",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "publisher": "bdt-apex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shrimpl-Language/lsp-shrimpl-lang.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "shrimpl",
+    "education",
+    "language",
+    "lsp"
+  ],
+  "icon": "icons/shr.png",
+  "galleryBanner": {
+    "color": "#071521",
+    "theme": "dark"
+  },
   "activationEvents": [
     "onLanguage:shrimpl"
   ],
@@ -41,7 +56,7 @@
         "shrimpl.lsp.path": {
           "type": "string",
           "default": "shrimpl-lsp",
-          "description": "Command used to start the Shrimpl language server (absolute path or executable name)."
+          "description": "Command used to start the Shrimpl language server (absolute path, workspace-relative path, or executable name on PATH)."
         },
         "shrimpl.lsp.debugArgs": {
           "type": "array",
@@ -81,6 +96,17 @@
     "lint": "echo \"no lint configured\"",
     "test": "echo \"no tests configured\""
   },
+  "files": [
+    "out/**",
+    "server/**",
+    "syntaxes/**",
+    "language-configuration.json",
+    "icon-theme.json",
+    "icons/**",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
   "dependencies": {
     "vscode-languageclient": "^9.0.1"
   },
