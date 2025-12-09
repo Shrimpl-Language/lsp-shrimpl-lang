@@ -29,6 +29,7 @@
 
 import * as vscode from "vscode";
 import * as path from "path";
+import * as fs from "fs";
 import {
   LanguageClient,
   LanguageClientOptions,
@@ -70,13 +71,13 @@ function platformBinaryName(): string {
  *
  * Supported variables:
  *  - ${workspaceFolder}
- *  - ${workspaceFolderBasename}
+ *  *  - ${workspaceFolderBasename}
  *
  * Behavior:
  *  - If the value has no slashes (for example "shrimpl-lsp"), it is treated
  *    as a plain command on PATH and returned as is.
- *  - If the value has slashes and is not absolute, it is resolved under the
- *    first workspace folder.
+ *  - If the value has slashes and is not absolute, it is resolved against the
+ *    first workspace folder (if any).
  */
 function resolveServerCommand(
   rawValue: string,
@@ -122,6 +123,49 @@ function resolveServerCommand(
   );
 
   return resolved;
+}
+
+/**
+ * Try to ensure a given command path is executable on POSIX systems.
+ * This is mainly useful for bundled binaries under the extension's
+ * `server/` directory.
+ */
+function ensureExecutable(
+  command: string,
+  outputChannel: vscode.OutputChannel,
+): void {
+  if (process.platform === "win32") {
+    // Windows uses .exe and doesn't need chmod.
+    return;
+  }
+
+  // Only attempt chmod if it looks like a path (contains a slash).
+  const hasSlash = command.includes("/") || command.includes("\\");
+  if (!hasSlash) {
+    return;
+  }
+
+  try {
+    const stat = fs.statSync(command);
+
+    if (!stat.isFile()) {
+      outputChannel.appendLine(
+        `[Shrimpl] Not a regular file, skipping chmod: ${command}`,
+      );
+      return;
+    }
+
+    // 0o755 == rwxr-xr-x
+    fs.chmodSync(command, 0o755);
+    outputChannel.appendLine(
+      `[Shrimpl] Ensured executable bit on: ${command}`,
+    );
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    outputChannel.appendLine(
+      `[Shrimpl] Failed to ensure executable bit on ${command}: ${msg}`,
+    );
+  }
 }
 
 /**
@@ -175,6 +219,9 @@ export async function activate(
     vscode.window.createOutputChannel("Shrimpl LSP Trace");
 
   const serverCommand = getServerCommand(context, outputChannel);
+
+  // For bundled binaries on macOS/Linux, make sure the file is executable.
+  ensureExecutable(serverCommand, outputChannel);
 
   const config = vscode.workspace.getConfiguration("shrimpl");
   const debugArgs =
