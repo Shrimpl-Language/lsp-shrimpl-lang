@@ -2,7 +2,7 @@
   "name": "shrimpl",
   "displayName": "Shrimpl",
   "description": "Language support for the Shrimpl language (LSP + syntax).",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "bdt-apex",
   "repository": {
     "type": "git",
