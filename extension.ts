@@ -176,6 +176,10 @@ export async function activate(
 
   const serverCommand = getServerCommand(context, outputChannel);
 
+  const config = vscode.workspace.getConfiguration("shrimpl");
+  const debugArgs =
+    config.get<string[]>("lsp.debugArgs") ?? ["--log-level", "debug"];
+
   const env = {
     ...process.env,
   };
@@ -188,7 +192,7 @@ export async function activate(
     },
     debug: {
       command: serverCommand,
-      args: ["--debug"],
+      args: debugArgs,
       options: { env },
     },
   };

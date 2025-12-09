@@ -2,7 +2,7 @@
   "name": "shrimpl",
   "displayName": "Shrimpl",
   "description": "Language support for the Shrimpl language (LSP + syntax).",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publisher": "bdt-apex",
   "repository": {
     "type": "git",
@@ -55,8 +55,8 @@
       "properties": {
         "shrimpl.lsp.path": {
           "type": "string",
-          "default": "shrimpl-lsp",
-          "description": "Command used to start the Shrimpl language server (absolute path, workspace-relative path, or executable name on PATH)."
+          "default": "",
+          "description": "Optional override for the Shrimpl language server command (absolute path, workspace-relative path, or executable name on PATH). When empty, the extension uses the bundled language server binary under its 'server/' folder."
         },
         "shrimpl.lsp.debugArgs": {
           "type": "array",
